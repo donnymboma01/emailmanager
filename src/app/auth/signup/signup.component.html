@@ -1,9 +1,15 @@
 <h3>Create an Account</h3>
 <form class="ui form" [formGroup]="authForm">
-  <div class="field">
+  <!-- <div class="field">
     <label for="">Username</label>
     <input type="text" formControlName="username" />
-  </div>
+  </div> -->
+  <!-- Soit ca -->
+  <!-- <app-input label="Username" [controlForm]="authForm.get('username') | formControl"></app-input> -->
+  <app-input
+    label="Username"
+    [control]="$any(authForm.get('username'))"
+  ></app-input>
   {{ authForm.get("username")!.errors | json }}
 
   <div class="field">
