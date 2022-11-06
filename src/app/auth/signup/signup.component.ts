@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { MatchPassword } from '../validators/match-password';
 import { UniqueUsername } from '../validators/unique-username';
 
@@ -41,4 +41,10 @@ export class SignupComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
+  // toControl(absCtrl: AbstractControl): FormControl {
+  //   const ctrl = absCtrl as FormControl;
+  //   // if(!ctrl) throw;
+  //   return ctrl;
+  // }
 }
